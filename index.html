@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILLY Joias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Emilyane Joias</h1>
+        <div class="cart" onclick="toggleCart()">
+            <span id="cart-count">0</span> itens no carrinho
+        </div>
+    </header>
+    <main>
+        <div id="product-list" class="product-list"></div>
+        <div id="cart" class="cart-popup">
+            <h2>Carrinho</h2>
+            <div id="cart-items"></div>
+            <p>Total: R$ <span id="total-price">0.00</span></p>
+            <button onclick="checkout()">Finalizar Compra</button>
+            <button onclick="toggleCart()">Fechar</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 MILLY Joias todos os direitos reservados</p>
+        <p>Telefone: <a href="tel:+5572995812932">+55 27 9 9581-2932</a></p>
+        <div class="social-media">
+            <a href="https://www.instagram.com/maci.elemilia?igsh=MXRwbmQ4emx3dXh5cg==" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/emillyane.maciel" target="_blank">Facebook</a>
+        </div>
+        <div class="terms">
+            <a href="#terms">Termos de Uso</a>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=27995812932" class="whatsapp-button" target="_blank">WhatsApp</a>
+    
+    <div id="checkout-form" class="checkout-form">
+        <h2>Finalizar Compra</h2>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required>
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" required>
+        <label for="payment">Forma de Pagamento:</label>
+        <select id="payment">
+            <option value="pix">PIX</option>
+            <option value="Dinheiro">Dinheiro</option>
+        </select>
+        <button onclick="completePurchase()">Confirmar Pagamento</button>
+        <button onclick="closeCheckout()">Cancelar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
